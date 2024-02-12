@@ -14,10 +14,163 @@
   "contributes": {
     "commands": [
       {
-        "command": "firastar.helloWorld",
-        "title": "Hello World"
+        "command": "firastar.firast",
+        "title": "firast"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "firastar",
+      "properties": {
+        "preserveFrontmatter": {
+          "type": "boolean",
+          "default": true
+        },
+        "preserveHtml": {
+          "type": "boolean",
+          "default": true
+        },
+        "preserveComment": {
+          "type": "boolean",
+          "default": true
+        },
+        "preserveBrace": {
+          "type": "boolean",
+          "default": true
+        },
+        "preserveBracket": {
+          "type": "boolean",
+          "default": true
+        },
+        "preserveUri": {
+          "type": "boolean",
+          "default": true
+        },
+        "preserveNbsp": {
+          "type": "boolean",
+          "default": true
+        },
+        "preserveEntity": {
+          "type": "boolean",
+          "default": true
+        },
+        "fixEOL": {
+          "type": "boolean",
+          "default": true
+        },
+        "fixStandardChars": {
+          "type": "boolean",
+          "default": true
+        },
+        "fixDashes": {
+          "type": "boolean",
+          "default": true
+        },
+        "fixEllipsis": {
+          "type": "boolean",
+          "default": true
+        },
+        "fixEnglishQuotes": {
+          "type": "boolean",
+          "default": true
+        },
+        "removeRLM": {
+          "type": "boolean",
+          "default": true
+        },
+        "fixZWNJ": {
+          "type": "boolean",
+          "default": true
+        },
+        "fixArabicNumbers": {
+          "type": "boolean",
+          "default": true
+        },
+        "fixEnglishNumbers": {
+          "type": "boolean",
+          "default": true
+        },
+        "fixNumeralSymbols": {
+          "type": "boolean",
+          "default": true
+        },
+        "fixPunctuations": {
+          "type": "boolean",
+          "default": true
+        },
+        "fixNonPersianChars": {
+          "type": "boolean",
+          "default": true
+        },
+        "fixQuestionMarks": {
+          "type": "boolean",
+          "default": true
+        },
+        "fixDates": {
+          "type": "boolean",
+          "default": true
+        },
+        "fixHamzeh": {
+          "type": "boolean",
+          "default": true
+        },
+        "fixArabicHamzeh": {
+          "type": "boolean",
+          "default": true
+        },
+        "fixSuffixZwnj": {
+          "type": "boolean",
+          "default": true
+        },
+        "fixPrefixZwnj": {
+          "type": "boolean",
+          "default": true
+        },
+        "fixBracesSpacing": {
+          "type": "boolean",
+          "default": true
+        },
+        "fixBracesSpacingInside": {
+          "type": "boolean",
+          "default": true
+        },
+        "removeExtraMarks": {
+          "type": "boolean",
+          "default": true
+        },
+        "fixPunctuationSpacing": {
+          "type": "boolean",
+          "default": true
+        },
+        "removeKashidas": {
+          "type": "boolean",
+          "default": true
+        },
+        "fixMiscSpacing": {
+          "type": "boolean",
+          "default": true
+        },
+        "removeDiacritics": {
+          "type": "boolean",
+          "default": true
+        },
+        "fixDiacritics": {
+          "type": "boolean",
+          "default": true
+        },
+        "removeSpaces": {
+          "type": "boolean",
+          "default": true
+        },
+        "fixLineBreaks": {
+          "type": "boolean",
+          "default": true
+        },
+        "trim": {
+          "type": "boolean",
+          "default": true
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "pnpm run package",
@@ -31,17 +184,23 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.54.0",
     "@types/mocha": "^10.0.6",
     "@types/node": "18.x",
+    "@types/vscode": "^1.54.0",
     "@typescript-eslint/eslint-plugin": "^6.19.1",
     "@typescript-eslint/parser": "^6.19.1",
-    "eslint": "^8.56.0",
-    "typescript": "^5.3.3",
-    "ts-loader": "^9.5.1",
-    "webpack": "^5.90.0",
-    "webpack-cli": "^5.1.4",
     "@vscode/test-cli": "^0.0.4",
-    "@vscode/test-electron": "^2.3.9"
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard": "^17.1.0",
+    "prettier": "^3.2.5",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@firastar/firastar-js": "^0.1.2"
   }
 }
